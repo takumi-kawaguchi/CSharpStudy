@@ -1,47 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpStudy
 {
 	class Triangle
 	{
-		private double width;
-		private double height;
+		private double _width;
+		private double _height;
 
-		public double GetWidth()
+		public double Width
 		{
-			return this.width;
-		}
-
-		public void SetWidth(double width)
-		{
-			if (width <= 0)
+			get
 			{
-				throw new ArgumentException("正数で指定してください");
+				return this._width;
 			}
-			this.width = width;
-		}
 
-		public double GetHeight()
-		{
-			return this.height;
-		}
-
-		public void SetHeight(double height)
-		{
-			if (height <= 0)
+			set
 			{
-				throw new ArgumentException("正数で指定してください");
+				if (value <= 0)
+				{
+					throw new ArgumentException("正数で定義してください");
+				}
+				this._width = value;
 			}
-			this.height = height;
 		}
 
+		public double Height
+		{
+			get
+			{
+				return this._height;
+			}
+
+			set
+			{
+				if (value <= 0)
+				{
+					throw new ArgumentException("正数で指定してください");
+				}
+				this._height = value;
+			}
+		}
+		
 		public double GetArea()
 		{
-			return this.GetWidth() * this.GetHeight() / 2;
+			return this.Width * this.Height / 2;
 		}
 	}
 }
