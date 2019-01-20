@@ -10,12 +10,10 @@ namespace CSharpStudy
 	{
 		public static void Main(string[] args)
 		{
-			var t = new Triangle();
-			t.SetWidth(10);
-			t.SetHeight(5);
+			var str = "きゃりーぱみゅぱみゅ\n";
 
-			Console.WriteLine(t.GetArea());
-			t.SetHeight(-5);
+			Console.WriteLine(str.Repeat(10));
+
 			Console.ReadKey();
 		}
 	}
