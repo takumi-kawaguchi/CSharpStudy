@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace CSharpStudy
 {
-	class Program
+	public class Program
 	{
-		static void Main(string[] args)
+		public static void Main(string[] args)
 		{
+			var t = new Triangle();
+			t.SetWidth(10);
+			t.SetHeight(5);
+
+			Console.WriteLine(t.GetArea());
+			t.SetHeight(-5);
+			Console.ReadKey();
 		}
 	}
 }
