@@ -12,31 +12,22 @@ namespace CSharpStudy
 
 		public string LastName { get; set; }
 
-		public string Show()
+		public virtual string Show()
 		{
-			return $"私の名前は{FirstName} {LastName}";
+			return $"i am {this.FirstName} {this.LastName}";
 		}
 	}
 
 	public class BusinessPerson : Person
 	{
+		public override string Show()
+		{
+			return $"i am {this.FirstName} {this.LastName}, a business person.";
+		}
+
 		public string Work()
 		{
-			return $"{this.LastName} {this.FirstName} is working.";
-		}
-
-		public new string Show()
-		{
-			return $"会社員の{FirstName} {LastName}です。";
-		}
-	}
-
-	public class EliteBusinessPerson : BusinessPerson
-	{
-		public new string Work()
-		{
-			var result = base.Work();
-			return $"{result} always working hard.";
+			return $"{this.FirstName} {this.LastName} is working now.";
 		}
 	}
 }
