@@ -10,6 +10,14 @@ namespace CSharpStudy
 	{
 		public static void Main(string[] args)
 		{
+			var bp = new EliteBusinessPerson
+			{
+				FirstName = "takumi",
+				LastName = "kawaguchi"
+			};
+			Console.WriteLine(bp.Work());
+			Console.WriteLine(bp.Show());
+
 			Console.ReadKey();
 		}
 	}
