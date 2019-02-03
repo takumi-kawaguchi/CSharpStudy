@@ -10,12 +10,6 @@ namespace CSharpStudy
 	{
 		public static void Main(string[] args)
 		{
-			var t = new Triangle();
-			t.Height = 10;
-			t.Width = 20;
-
-			Console.WriteLine(t.GetArea());
-
 			Console.ReadKey();
 		}
 	}
